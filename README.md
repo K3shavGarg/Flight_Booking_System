@@ -17,9 +17,29 @@ Additionally, the system is engineered to handle the complexities and challenges
 - **Database**: MySQL
 - **Other Tools**: Cron jobs, Sequelize (for ORM) , POSTMAN (for API TESTING)
 
+## Setup The Project 
+- Clone the project in your local machine
+- Go inside the folder path and execute the following command:
+    ```
+    npm install
+    ```
+- In the root directory create a .env file and add the following env variables
+    ```
+    PORT=<port number of your choice>
+    ```
+    ex:
+        ```
+         PORT=3000
+        ```
+- In src/config/config.json file set up your development environment, then write the username of your db, password of your db and in dialect mention whatever db you are using for ex: mysql, mariadb etc.
+- After configuring your database you will need to run the Sequelize migrations to create or update the database tables. You can do this using the Sequelize CLI:
+    ```
+      npx sequelize-cli db:migrate
+    ```
+- Run the server using command:
+    ```
+      npm run dev
+    ```
+
 ## Schema and Relations Between Models
 ![Schema](https://raw.githubusercontent.com/K3shavGarg/Flight_Booking_System/master/Schema.png)
-
-    
-    
-
