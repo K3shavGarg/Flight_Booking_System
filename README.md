@@ -18,6 +18,8 @@ Additionally, the system is engineered to handle the complexities and challenges
 - **Other Tools**: Cron jobs, Sequelize (for ORM) , POSTMAN (for API TESTING)
 
 ## Schema and Relations Between Models
-    ![image](https://github.com/user-attachments/assets/95cf53fa-c621-4778-9834-97afef35b552)
+![Schema](https://raw.githubusercontent.com/K3shavGarg/Flight_Booking_System/master/Schema.png)
+
+    
     
 
