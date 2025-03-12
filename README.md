@@ -1,4 +1,4 @@
-# Flight_Booking_System
+# Flight Booking System
 
 ## DESCRIPTION
 The Flight Booking System is a platform designed to streamline the process of searching, booking, and managing flight reservations. 
