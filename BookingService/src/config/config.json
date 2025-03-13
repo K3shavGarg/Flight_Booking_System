@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Keshav/043",
-    "database": "Flights", 
+    "password": "your_password_here",
+    "database": "your_database_name_here", 
     "host": "127.0.0.1",
     "dialect": "mysql",
     "timezone": "+05:30" 
