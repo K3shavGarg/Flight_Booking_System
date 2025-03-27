@@ -8,6 +8,9 @@ Additionally, the system is engineered to handle the complexities and challenges
 ## Architecture Overview
 ![Airline](https://github.com/user-attachments/assets/04ed99bd-002d-4d45-b831-10154c3cf051)
 
+## Schema and Relations Between Models
+![Schema](https://raw.githubusercontent.com/K3shavGarg/Flight_Booking_System/master/Schema.png)
+
 
 
 ## Features
@@ -45,5 +48,4 @@ Additionally, the system is engineered to handle the complexities and challenges
       npm run dev
     ```
 
-## Schema and Relations Between Models
-![Schema](https://raw.githubusercontent.com/K3shavGarg/Flight_Booking_System/master/Schema.png)
+
