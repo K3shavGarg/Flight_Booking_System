@@ -5,6 +5,10 @@ The Flight Booking System is a platform designed to streamline the process of se
 This system empowers users to effortlessly explore available flight options, make bookings, and efficiently manage their reservations. 
 Additionally, the system is engineered to handle the complexities and challenges that arise in a concurrent environment, ensuring seamless performance even under heavy load.
 
+## Architecture Overview
+![Airline](https://github.com/user-attachments/assets/04ed99bd-002d-4d45-b831-10154c3cf051)
+
+
 
 ## Features
 - CRUD Operations: Manage airports, airplanes, and flights with full CRUD functionality.
