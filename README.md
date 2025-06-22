@@ -21,6 +21,6 @@ Additionally, the system is engineered to handle the complexities and challenges
 - Cron Jobs: Automatically remove ghost bookings with scheduled cron jobs at fixed intervals.
 
 ## Technologies Used
-- **Backend**: Node.js, Express
+- **Backend**: Node.js, Go,
 - **Database**: MySQL
-- **Other Tools**: Cron jobs, Sequelize (for ORM) , POSTMAN (for API TESTING)
+- **Other Tools**: Docker, RabbitMQ, POSTMAN (for API TESTING)
