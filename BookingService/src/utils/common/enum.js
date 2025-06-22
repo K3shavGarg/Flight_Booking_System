@@ -1,18 +1,25 @@
 const SEAT_TYPE = {
-    BUSINESS: 'business',
-    ECONOMY:'economy',
-    PREMIUM_ECONOMY:'premium_economy',
-    FIRST_CLASS:'first_class'
+    BUSINESS: 'BUSINESS',
+    ECONOMY: 'ECONOMY',
+    PREMIUM_ECONOMY: 'PREMIUM ECONOMY',
+    FIRST_CLASS: 'FIRST CLASS'
 }
 
 const BOOKING_status = {
-    PENDING:'pending',
-    INITIATED:'initiated',
-    CANCELLED:'cancelled',
-    BOOKED:'booked'
+    PENDING: 'PENDING',
+    INITIATED: 'INITIATED',
+    CANCELLED: 'CANCELLED',
+    BOOKED: 'BOOKED'
+}
+
+const TICKET_STATUS = {
+    ISSUED: "ISSUED",
+    CANCELLED: "CANCELLED",
+    CHECKED_IN: "CHECKED_IN"
 }
 
 module.exports = {
     SEAT_TYPE,
-    BOOKING_status
+    BOOKING_status,
+    TICKET_STATUS
 }

@@ -1,32 +1,26 @@
 const express = require('express');
-const {serverConfig} = require('./config');
+const { serverConfig } = require('./config');
+const { Queue } = require('./config');
 
+const CRON = require('./utils/common/cron-job');
+const logger = require('./config/logger-config');
 
+// Initializing express app and middleware like body-parser
 const app = express();
-
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 
+
+// Registering routes
 const apiRoutes = require('./routes')
-
 app.use('/api', apiRoutes);
+console.log("Port:", serverConfig.PORT)
 
-const CRON = require('./utils/common/cron-job')
+app.listen(serverConfig.PORT, async () => {
+    logger.info(`Server is running on port ${serverConfig.PORT}`);
 
-app.listen(serverConfig.PORT,()=>{
-    console.log(`Server is running on port ${serverConfig.PORT}`);
-
+    await Queue.connectQueue();
+    logger.info('Connected to RabbitMQ');
     CRON();
-    // const { Airports, Flight} = require('./models');
-    // const airport = await Airports.findByPk(2);
-    // const airport = await city.createAirport({name :'Netaji Subhas Chandra Bose International Airport', code:'CCU'});
-    // const airportsInCity = await city.getAirports();
-    // console.log(airportsInCity);
-    // console.log(City)
-    // const response = await City.destroy({ 
-    //     where:{
-    //         id: 3
-    //     }
-    // })
-}) 
+}); 

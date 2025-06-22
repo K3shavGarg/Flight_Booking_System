@@ -53,21 +53,9 @@ class flightRepository extends crudRepository{
         return response;
     }
 
-    // async updateSeats(flightId, seats, dec){
-    //     await db.sequelize.query(addRowLockOnFlights(flightId));
-    //     const flight = await Flight.findByPk(flightId);
-    //     // DEC is string '0' 
-    //     if(dec === '1'){
-    //         await flight.decrement('totalSeats', {by : seats});
-    //     }else{
-    //         await flight.increment('totalSeats', {by : seats});    
-    //     }
-    //     return flight;
-    // }
     async updateSeats(flightId, seats, dec) {
         const transaction = await db.sequelize.transaction(); // Start a transaction
         try {
-
             // Lock the row using SELECT ... FOR UPDATE inside the transaction
             await db.sequelize.query(addRowLockOnFlights(), {
                 replacements: { flightId }, // Parameterized query to avoid SQL injection
@@ -76,7 +64,6 @@ class flightRepository extends crudRepository{
         
             // Fetch the flight object (this will still happen within the transaction)
             const flight = await Flight.findByPk(flightId, { transaction: transaction });
-        
             // DEC is a string
             if (dec === '1') {
                 await flight.decrement('totalSeats', { by: seats, transaction: transaction });

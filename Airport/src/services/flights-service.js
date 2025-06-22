@@ -88,6 +88,7 @@ async function getFlight(id){
         if(error.statusCodes === StatusCodes.NOT_FOUND){
             throw new AppError('Flight not found', StatusCodes.NOT_FOUND);
         }
+        console.log(error)
         throw new AppError('Some Error Occured', StatusCodes.INTERNAL_SERVER_ERROR);
     }
 }

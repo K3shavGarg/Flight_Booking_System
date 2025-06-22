@@ -12,7 +12,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   await queryInterface.bulkInsert('seats',[
+   await queryInterface.bulkInsert('Seats',[
     {
       airplaneId:3,
       row:1,

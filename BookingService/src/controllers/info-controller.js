@@ -4,7 +4,7 @@ const info = (req, res) => {
     res.status(StatusCodes.OK)
     .send({
         "success" : true,
-        "message" : "This is the info endpoint"
+        "message" : "This is the info endpoint for Booking Service"
     })
 };
 

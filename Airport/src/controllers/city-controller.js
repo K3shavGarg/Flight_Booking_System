@@ -8,7 +8,7 @@ async function createCity(req, res){
         const city = await cityService.createCity({
             name : req.body.name,
         });
-        SuccessResponse.data = city;
+        SuccessResponse.data = city.toJSON();
         return res.status(StatusCodes.CREATED)
                 .json(SuccessResponse);
     } catch (error) {
