@@ -10,7 +10,7 @@ Additionally, the system is engineered to handle the complexities and challenges
 
 
 ## Schema and Relations Between Models
-![Schema](https://raw.githubusercontent.com/K3shavGarg/Flight_Booking_System/master/Schema.png)
+![Schema](https://github.com/K3shavGarg/Flight_Booking_System/blob/master/Schema%20(1).png?raw=true)
 
 
 
